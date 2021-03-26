@@ -49,7 +49,7 @@ import '@sixa/wp-bock-spacer/dist/public.css';
 ```
 
 or it may be imported in a stylesheet in your project:
-```jsx
+```postcss
 @import '@sixa/wp-block-spacer/dist/public.css';
 ```
 
