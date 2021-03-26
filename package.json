@@ -1,6 +1,6 @@
 {
   "name": "@sixa/wp-block-spacer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Spacer block for WordPress Gutenberg",
   "main": "dist/index.js",
   "browser": "dist/wp-block-spacer.min.js",
