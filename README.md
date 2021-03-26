@@ -32,14 +32,14 @@ import * as spacer from '@sixa/wp-bock-spacer';
 import '@sixa/wp-bock-spacer/dist/editor.css';
 
 export function registerBlocksFromPackages() {
-	forEach( [ spacer ], ( block ) => {
-		if ( ! block ) {
-			return;
-		}
+    forEach( [ spacer ], ( block ) => {
+        if ( ! block ) {
+            return;
+        }
 
-		const { registerBlock } = block;
-		registerBlock();
-	} );
+        const { registerBlock } = block;
+        registerBlock();
+    } );
 }
 ```
 
