@@ -1,6 +1,6 @@
 {
   "name": "@sixa/wp-block-spacer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Spacer block for WordPress Gutenberg",
   "main": "dist/index.js",
   "browser": "dist/wp-block-spacer.min.js",
@@ -37,7 +37,7 @@
   ],
   "homepage": "https://github.com/sixach/sixa-wp-block-spacer#readme",
   "dependencies": {
-    "@sixa/wp-block-utils": "^0.3.1",
+    "@sixa/wp-block-utils": "^0.3.2",
     "classnames": "^2.2.6",
     "lodash-es": "^4.17.21",
     "rename-keys": "^2.0.1"
