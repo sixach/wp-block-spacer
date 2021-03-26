@@ -7,7 +7,7 @@
  */
 import { set } from 'lodash-es';
 import classnames from 'classnames';
-import { visibilityClassNames } from "@sixa/wp-block-utils";
+import { visibilityClassNames } from '@sixa/wp-block-utils';
 
 /**
  * WordPress dependencies

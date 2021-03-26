@@ -6,7 +6,7 @@
  * External dependencies
  */
 import { get } from 'lodash-es';
-import { blockName, blockClassName } from "@sixa/wp-block-utils";
+import { blockName, blockClassName } from '@sixa/wp-block-utils';
 
 /**
  * WordPress dependencies

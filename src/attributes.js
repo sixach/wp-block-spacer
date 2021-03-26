@@ -5,7 +5,7 @@
 /**
  * External dependencies
  */
-import { visibilityAttrs } from "@sixa/wp-block-utils";
+import { visibilityAttrs } from '@sixa/wp-block-utils';
 
 const attributes = {
 	height: {

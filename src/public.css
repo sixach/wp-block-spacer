@@ -1,5 +1,5 @@
 @import "@sixa/wp-block-utils/dist/visibility.css";
 
 .wp-block-[prefix]-spacer {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }

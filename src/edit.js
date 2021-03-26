@@ -7,7 +7,7 @@
  */
 import classnames from 'classnames';
 import { add, set, get, max, min, parseInt } from 'lodash-es';
-import { visibilityClassNames, VisibilityToolbar } from "@sixa/wp-block-utils";
+import { visibilityClassNames, VisibilityToolbar } from '@sixa/wp-block-utils';
 
 /**
  * WordPress dependencies
@@ -67,16 +67,11 @@ const Edit = ( { attributes, isSelected, className, setAttributes, backgroundCol
 	return (
 		<>
 			<ResizableBox
-				className={ classnames(
-					className,
-					visibilityClassNames( visible ),
-					'block-library-spacer__resize-container',
-					{
-						'is-selected': isSelected,
-						[ backgroundColorClass ]: backgroundColorClass,
-						[ gradientClass ]: gradientClass,
-					}
-				) }
+				className={ classnames( className, visibilityClassNames( visible ), 'block-library-spacer__resize-container', {
+					'is-selected': isSelected,
+					[ backgroundColorClass ]: backgroundColorClass,
+					[ gradientClass ]: gradientClass,
+				} ) }
 				size={ {
 					height,
 				} }
