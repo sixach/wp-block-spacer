@@ -10,12 +10,13 @@ import edit from './edit';
 import save from './save';
 import attributes from './attributes';
 import transforms from './transforms';
-import { icons } from "@sixa/wp-block-utils";
+import { icons, PREFIX, blockName } from "@sixa/wp-block-utils";
 
 /**
  * WordPress dependencies
  */
 const { __, _x } = wp.i18n;
+const { registerBlockType } = wp.blocks;
 
 /**
  * Block meta-data
@@ -47,4 +48,14 @@ const settings = {
 	save,
 };
 
-export { name, title, category, icon, settings };
+const registerBlock = () => {
+	registerBlockType( blockName( name ), {
+		category,
+		icon: {
+			src: icon,
+		},
+		...settings,
+	} );
+};
+
+export { name, title, category, icon, settings, registerBlock, PREFIX };
