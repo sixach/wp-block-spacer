@@ -14,3 +14,10 @@ rollup.config.js
 .eslintrc.js
 .prettierrc.js
 src
+.idea
+.browserslistrc
+.eslintignore
+.gitattributes
+.npmpackagejsonlintignore
+.stylelintignore
+npmpackagejsonlint.json
