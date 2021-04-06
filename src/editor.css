@@ -1,0 +1,8 @@
+
+/**
+ * The following styles get applied inside the editor only.
+ */
+
+.wp-block-[prefix]-spacer {
+	margin-bottom: 0;
+}
