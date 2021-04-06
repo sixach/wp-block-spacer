@@ -21,3 +21,4 @@ src
 .npmpackagejsonlintignore
 .stylelintignore
 npmpackagejsonlint.json
+index.php

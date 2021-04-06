@@ -1,5 +1,5 @@
 module.exports = {
-	presets: [ '@babel/preset-env', '@babel/preset-react' ],
+	presets: [ '@wordpress/babel-preset-default' ],
 	plugins: [
 		[
 			'@babel/plugin-proposal-class-properties',

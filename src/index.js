@@ -1,61 +1,43 @@
 /**
- * Define meta-data for registering block type.
+ * Registers a new block provided a unique name and an object defining its behavior.
+ *
+ * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
+import { registerBlockType } from '@wordpress/blocks';
 
 /**
- * Internal dependencies & components
+ * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
+ * All files containing `style` keyword are bundled together. The code used
+ * gets applied both to the front of your site and to the editor.
+ *
+ * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
-import { get } from 'lodash-es';
-import edit from './edit';
+import './style.css';
+
+/**
+ * Internal dependencies
+ */
+import Edit from './edit';
 import save from './save';
-import attributes from './attributes';
-import transforms from './transforms';
-import { icons, PREFIX, blockName } from '@sixa/wp-block-utils';
 
 /**
- * WordPress dependencies
+ * Every block starts by registering a new block type definition.
+ *
+ * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
-const { __, _x } = wp.i18n;
-const { registerBlockType } = wp.blocks;
+registerBlockType( 'sixa/spacer', {
+	/**
+	 * @see https://make.wordpress.org/core/2020/11/18/block-api-version-2/
+	 */
+	apiVersion: 2,
 
-/**
- * Block meta-data
- */
-const name = 'spacer';
-const title = __( 'Spacer', 'sixa' );
-const category = 'design';
-const icon = get( icons, name );
+	/**
+	 * @see ./edit.js
+	 */
+	edit: Edit,
 
-/**
- * Block settings
- */
-const settings = {
-	title,
-	description: __( 'Insert blank areas with a customizable height between blocks.', 'sixa' ),
-	keywords: [
-		'sixa',
-		_x( 'margin', 'block keyword', 'sixa' ),
-		_x( 'blank', 'block keyword', 'sixa' ),
-		_x( 'divider', 'block keyword', 'sixa' ),
-	],
-	supports: {
-		anchor: true,
-		html: false,
-	},
-	attributes,
-	transforms,
-	edit,
+	/**
+	 * @see ./save.js
+	 */
 	save,
-};
-
-const registerBlock = () => {
-	registerBlockType( blockName( name ), {
-		category,
-		icon: {
-			src: icon,
-		},
-		...settings,
-	} );
-};
-
-export { name, title, category, icon, settings, registerBlock, PREFIX };
+} );

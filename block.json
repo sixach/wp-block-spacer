@@ -1,0 +1,50 @@
+{
+	"apiVersion": 2,
+	"name": "sixa/spacer",
+	"title": "Spacer",
+	"category": "design",
+	"icon": "block-default",
+	"description": "Spacer block for WordPress editor.",
+	"keywords": [
+		"sixa",
+		"blank",
+		"margin",
+		"divider",
+		"separator"
+	],
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"height": {
+            "type": "number",
+            "default": 100
+        },
+        "visible": {
+            "type": "object",
+            "default": {
+                "desktop": false,
+                "laptop": false,
+                "tablet": false,
+                "smartphone": false
+            }
+        },
+		"backgroundColor": {
+			"type": "string"
+		},
+		"customBackgroundColor": {
+			"type": "string"
+		},
+		"gradient": {
+			"type": "string"
+		},
+		"customGradient": {
+			"type": "string"
+		}
+	},
+	"textdomain": "sixa",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
