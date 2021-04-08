@@ -6,8 +6,7 @@
 @custom-media --mobile-only (max-width: 767px);
 @custom-media --tablet-only (min-width: 768px) and (max-width: 959px);
 @custom-media --desktop-only (min-width: 960px) and (max-width: 1151px);
-@custom-media --widescreen-only (min-width: 1152px) and (max-width: 1343px);
-@custom-media --ultra-widescreen-only (min-width: 1344px);
+@custom-media --widescreen-only (min-width: 1152px);
 
 .hide-mobile {
 	display: none ?if media (--mobile-only);
@@ -23,8 +22,4 @@
 
 .hide-widescreen {
 	display: none ?if media (--widescreen-only);
-}
-
-.hide-ultra-widescreen {
-	display: none ?if media (--ultra-widescreen-only);
 }
