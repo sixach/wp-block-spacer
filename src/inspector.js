@@ -59,7 +59,7 @@ export default function Inspector( { attributes, backgroundColor, setBackgroundC
 			</PanelBody>
 			<PanelColorGradientSettings
 				title={ __( 'Color Settings', 'sixa' ) }
-				initialOpen={ false }
+				initialOpen={ true }
 				settings={ [
 					{
 						label: __( 'Background', 'sixa' ),
