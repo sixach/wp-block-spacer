@@ -4,5 +4,9 @@
  */
 
 .wp-block-[prefix]-spacer {
-	margin-bottom: 0;
+
+	&,
+	.block-library-spacer__resize-container {
+		margin-bottom: 0;
+	}
 }
