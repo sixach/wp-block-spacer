@@ -11,11 +11,6 @@ import { get, set, add, min, parseInt } from 'lodash';
 import classnames from 'classnames';
 
 /**
- * Utility helper methods specific for Sixa projects.
- */
-import { visibilityClassNames } from '@sixa/wp-block-utils';
-
-/**
  * Data module to manage application state for both plugins and WordPress itself.
  * The data module is built upon and shares many of the same core principles of Redux.
  *
@@ -126,7 +121,7 @@ function Edit( props ) {
 		<>
 			<View { ...useBlockProps() }>
 				<ResizableBox
-					className={ classnames( 'block-library-spacer__resize-container', visibilityClassNames( visible ), {
+					className={ classnames( 'block-library-spacer__resize-container', utils.visibilityClassNames( visible ), {
 						'is-selected': isSelected,
 					} ) }
 					style={ { ...styles } }
