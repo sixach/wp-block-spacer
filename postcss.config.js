@@ -9,6 +9,6 @@ module.exports = {
 		'postcss-if-media': {},
 		'postcss-custom-media': {},
 		'postcss-discard-empty': {},
-		autoprefixer: { grid: true },
+		autoprefixer: {},
 	},
 };
