@@ -33,8 +33,8 @@ const transforms = {
 			type: 'raw',
 			selector: blockClassName( 'spacer' ),
 			transform: ( node ) =>
-				createBlock( blockName( 'spacer' ), {
-					...getBlockAttributes( blockName( 'spacer' ), get( node, 'outerHTML' ) ),
+				createBlock( 'sixa/spacer', {
+					...getBlockAttributes( 'sixa/spacer', get( node, 'outerHTML' ) ),
 				} ),
 		},
 	],

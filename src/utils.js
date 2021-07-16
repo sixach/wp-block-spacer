@@ -54,7 +54,7 @@ const utils = {
 			classNames.push( classnames( { [ `hide-${ get( utils.visibilityAttrs, `${ key }.className` ) }` ]: !! value } ) );
 		} );
 		return trim( join( classNames, ' ' ) );
-	}
+	},
 };
 
 export default utils;
