@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Utility helper methods specific for Sixa projects.
  */
-import { blockName, blockClassName } from '@sixa/wp-block-utils';
+import { blockClassName } from '@sixach/wp-block-utils';
 
 /**
  * Given a block object, returns a copy of the block object.
@@ -25,7 +25,7 @@ const transforms = {
 			type: 'block',
 			blocks: [ 'core/spacer' ],
 			transform: ( { height } ) =>
-				createBlock( blockName( 'spacer' ), {
+				createBlock( 'sixa/spacer', {
 					height,
 				} ),
 		},
