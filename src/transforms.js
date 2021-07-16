@@ -11,7 +11,7 @@ import { blockClassName } from '@sixach/wp-block-utils';
 /**
  * Given a block object, returns a copy of the block object.
  *
- * @see https://github.com/WordPress/gutenberg/tree/HEAD/packages/blocks/README.md
+ * @see    https://github.com/WordPress/gutenberg/tree/HEAD/packages/blocks/README.md
  */
 import { createBlock, getBlockAttributes } from '@wordpress/blocks';
 
