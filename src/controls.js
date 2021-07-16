@@ -1,7 +1,7 @@
 /**
  * Utility for libraries from the `Lodash`.
  */
-import { merge, lowerCase } from 'lodash';
+import { merge, lowerCase, map, eq, get } from 'lodash';
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -24,7 +24,7 @@ import { ToolbarGroup, Dashicon } from '@wordpress/components';
  *
  * @see    https://developer.wordpress.org/block-editor/packages/packages-i18n/
  */
-import { sprintf } from '@wordpress/i18n';
+import { sprintf, _x } from '@wordpress/i18n';
 
 /**
  * The BlockToolbar component is used to render a toolbar that serves as a wrapper for number of options for each block.

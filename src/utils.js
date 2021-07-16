@@ -9,6 +9,13 @@ import { get, join, trim, forOwn } from 'lodash';
 import classnames from 'classnames';
 
 /**
+ * Retrieves the translation of text.
+ *
+ * @see    https://developer.wordpress.org/block-editor/packages/packages-i18n/
+ */
+import { _x } from '@wordpress/i18n';
+
+/**
  * Helpers.
  */
 const utils = {
