@@ -11,15 +11,10 @@ import { get, set, add, min, parseInt } from 'lodash';
 import classnames from 'classnames';
 
 /**
- * Utility helper methods specific for Sixa projects.
- */
-import { visibilityClassNames } from '@sixa/wp-block-utils';
-
-/**
  * Data module to manage application state for both plugins and WordPress itself.
  * The data module is built upon and shares many of the same core principles of Redux.
  *
- * @see https://github.com/WordPress/gutenberg/tree/HEAD/packages/data/README.md
+ * @see    https://github.com/WordPress/gutenberg/tree/HEAD/packages/data/README.md
  */
 import { withSelect, useDispatch } from '@wordpress/data';
 
@@ -27,21 +22,21 @@ import { withSelect, useDispatch } from '@wordpress/data';
  * The compose package is a collection of handy Hooks and Higher Order Components (HOCs).
  * The compose function is an alias to `flowRight` from Lodash.
  *
- * @see https://github.com/WordPress/gutenberg/blob/trunk/packages/compose/README.md
+ * @see    https://github.com/WordPress/gutenberg/blob/trunk/packages/compose/README.md
  */
 import { compose, withInstanceId } from '@wordpress/compose';
 
 /**
  * WordPress specific abstraction layer atop React.
  *
- * @see https://github.com/WordPress/gutenberg/tree/HEAD/packages/element/README.md
+ * @see    https://github.com/WordPress/gutenberg/tree/HEAD/packages/element/README.md
  */
 import { useState } from '@wordpress/element';
 
 /**
  * Primitives to be used cross-platform.
  *
- * @see https://github.com/WordPress/gutenberg/blob/trunk/packages/primitives/README.md
+ * @see    https://github.com/WordPress/gutenberg/blob/trunk/packages/primitives/README.md
  */
 import { View } from '@wordpress/primitives';
 
@@ -49,7 +44,7 @@ import { View } from '@wordpress/primitives';
  * This packages includes a library of generic WordPress components to be used for
  * creating common UI elements shared between screens and features of the WordPress dashboard.
  *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-components/
+ * @see    https://developer.wordpress.org/block-editor/reference-guides/packages/packages-components/
  */
 import { ResizableBox } from '@wordpress/components';
 
@@ -57,7 +52,7 @@ import { ResizableBox } from '@wordpress/components';
  * React hook that is used to mark the block wrapper element.
  * It provides all the necessary props like the class name.
  *
- * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
+ * @see    https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
 import { useBlockProps, withColors, __experimentalUseGradient } from '@wordpress/block-editor';
 
@@ -80,7 +75,7 @@ import Inspector from './inspector';
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
  *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
+ * @see    https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import './editor.css';
 
@@ -88,9 +83,9 @@ import './editor.css';
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
  *
- * @see 	https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#edit
- * @param 	{Object}  props 	Block meta-data properties.
- * @return 	{WPElement} 		Element to render.
+ * @see       https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#edit
+ * @param     {Object}      props    Block meta-data properties.
+ * @return    {WPElement}            Element to render.
  */
 function Edit( props ) {
 	const styles = {};
@@ -126,7 +121,7 @@ function Edit( props ) {
 		<>
 			<View { ...useBlockProps() }>
 				<ResizableBox
-					className={ classnames( 'block-library-spacer__resize-container', visibilityClassNames( visible ), {
+					className={ classnames( 'block-library-spacer__resize-container', utils.visibilityClassNames( visible ), {
 						'is-selected': isSelected,
 					} ) }
 					style={ { ...styles } }

@@ -1,6 +1,6 @@
 {
-	"name": "@sixa/wp-block-spacer",
-	"version": "0.1.0",
+	"name": "@sixach/wp-block-spacer",
+	"version": "1.0.0",
 	"description": "Spacer block for WordPress editor.",
 	"keywords": [
 		"blank",
@@ -22,12 +22,15 @@
 	"scripts": {
 		"dev": "wp-scripts start",
 		"build": "wp-scripts build",
-		"format:js": "wp-scripts format-js",
+		"format": "wp-scripts format",
 		"lint:css": "wp-scripts lint-style",
 		"lint:css-fix": "wp-scripts lint-style --fix",
 		"lint:js": "wp-scripts lint-js",
 		"lint:js-fix": "wp-scripts lint-js --fix",
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"lint:php": "composer lint:php",
+		"lint:wpcs": "composer lint:wpcs",
+		"lint:wpcs-fix": "composer lint:wpcbf",
 		"packages-update": "wp-scripts packages-update"
 	},
 	"husky": {
@@ -55,21 +58,19 @@
 		"@wordpress/primitives": "^1.12.1"
 	},
 	"devDependencies": {
-		"@babel/plugin-proposal-class-properties": "^7.12.1",
-		"@babel/plugin-proposal-object-rest-spread": "^7.12.1",
-		"@sixa/wp-block-utils": "^0.7.0",
-		"@wordpress/scripts": "^14.0.1",
-		"autoprefixer": "^9.8.6",
-		"classnames": "^2.2.6",
-		"husky": "^4.3.8",
-		"lint-staged": "^10.5.4",
+		"@sixach/wp-block-utils": "^1.0.0",
+		"@wordpress/scripts": "16.1.0",
+		"autoprefixer": "^10.2.6",
+		"classnames": "2.3.1",
+		"husky": "^6.0.0",
+		"lint-staged": "11.0.0",
 		"lodash": "^4.17.21",
-		"postcss-custom-media": "^7.0.8",
-		"postcss-discard-empty": "^4.0.1",
+		"postcss": "8.3.0",
+		"postcss-custom-media": "^8.0.0",
+		"postcss-discard-empty": "^5.0.1",
 		"postcss-if-media": "^1.0.3",
-		"postcss-loader": "^3.0.0",
-		"postcss-nested": "^4.2.1",
-		"postcss-nested-ancestors": "^2.0.0",
-		"postcss-selector-replace": "^1.0.2"
+		"postcss-nested": "5.0.5",
+		"postcss-nested-ancestors": "2.0.0",
+		"postcss-selector-replace": "1.0.2"
 	}
 }

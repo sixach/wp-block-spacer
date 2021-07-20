@@ -6,12 +6,12 @@ import { get } from 'lodash';
 /**
  * Utility helper methods specific for Sixa projects.
  */
-import { blockName, blockClassName } from '@sixa/wp-block-utils';
+import { blockClassName } from '@sixach/wp-block-utils';
 
 /**
  * Given a block object, returns a copy of the block object.
  *
- * @see https://github.com/WordPress/gutenberg/tree/HEAD/packages/blocks/README.md
+ * @see    https://github.com/WordPress/gutenberg/tree/HEAD/packages/blocks/README.md
  */
 import { createBlock, getBlockAttributes } from '@wordpress/blocks';
 
@@ -25,7 +25,7 @@ const transforms = {
 			type: 'block',
 			blocks: [ 'core/spacer' ],
 			transform: ( { height } ) =>
-				createBlock( blockName( 'spacer' ), {
+				createBlock( 'sixa/spacer', {
 					height,
 				} ),
 		},
@@ -33,8 +33,8 @@ const transforms = {
 			type: 'raw',
 			selector: blockClassName( 'spacer' ),
 			transform: ( node ) =>
-				createBlock( blockName( 'spacer' ), {
-					...getBlockAttributes( blockName( 'spacer' ), get( node, 'outerHTML' ) ),
+				createBlock( 'sixa/spacer', {
+					...getBlockAttributes( 'sixa/spacer', get( node, 'outerHTML' ) ),
 				} ),
 		},
 	],
