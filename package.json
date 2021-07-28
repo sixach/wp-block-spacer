@@ -65,7 +65,7 @@
 		"husky": "^6.0.0",
 		"lint-staged": "11.0.0",
 		"lodash": "^4.17.21",
-		"postcss": "8.3.0",
+		"postcss": "8.3.6",
 		"postcss-custom-media": "^8.0.0",
 		"postcss-discard-empty": "^5.0.1",
 		"postcss-if-media": "^1.0.3",
