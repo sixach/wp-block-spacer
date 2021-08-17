@@ -29,8 +29,8 @@ import utils from './utils';
  * editor into `post_content`.
  *
  * @see       https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#save
- * @param     {Object}    props               Block meta-data properties.
- * @param     {Object}    props.attributes    Block attributes.
+ * @param {Object} props            Block meta-data properties.
+ * @param {Object} props.attributes Block attributes.
  * @return    {WPElement}                     Element to render.
  */
 export default function save( { attributes } ) {

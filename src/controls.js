@@ -30,9 +30,9 @@ import { sprintf, _x } from '@wordpress/i18n';
  * The BlockToolbar component is used to render a toolbar that serves as a wrapper for number of options for each block.
  *
  * @see       https://github.com/WordPress/gutenberg/blob/trunk/packages/block-editor/src/components/block-toolbar/README.md
- * @param     {Object}      props                  Block meta-data properties.
- * @param     {Object}      props.attributes       Block attributes.
- * @param     {Function}    props.setAttributes    Update block attributes.
+ * @param {Object}   props               Block meta-data properties.
+ * @param {Object}   props.attributes    Block attributes.
+ * @param {Function} props.setAttributes Update block attributes.
  * @return    {WPElement}                          Toolbar element to render.
  */
 export default function Controls( { attributes, setAttributes } ) {
