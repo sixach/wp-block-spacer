@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
  * @since     1.0.0
  * @return    void
  */
-function register_block() {
+function register_block(): void {
 	register_block_type_from_metadata( __DIR__ );
 }
 add_action( 'init', __NAMESPACE__ . '\register_block' );
