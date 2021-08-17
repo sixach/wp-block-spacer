@@ -5,23 +5,58 @@
  * and in the editor.
  */
 
-@custom-media --mobile-only (max-width: 767px);
-@custom-media --tablet-only (min-width: 768px) and (max-width: 959px);
-@custom-media --desktop-only (min-width: 960px) and (max-width: 1151px);
-@custom-media --widescreen-only (min-width: 1152px);
+@mixin mobile-only {
 
-.hide-mobile {
-	display: none ?if media (--mobile-only);
+	@media (max-width: #{$break-medium - 1}) {
+		@content;
+	}
 }
 
-.hide-tablet {
-	display: none ?if media (--tablet-only);
+@mixin tablet-only {
+
+	@media (min-width: #{$break-medium}) and (max-width: #{$break-large - 1}) {
+		@content;
+	}
 }
 
-.hide-desktop {
-	display: none ?if media (--desktop-only);
+@mixin desktop-only {
+
+	@media (min-width: #{$break-large}) and (max-width: #{$break-wide - 1}) {
+		@content;
+	}
 }
 
-.hide-widescreen {
-	display: none ?if media (--widescreen-only);
+@mixin widescreen-only {
+
+	@media (min-width: #{$break-wide}) {
+		@content;
+	}
+}
+
+@include mobile-only {
+
+	.hide-mobile {
+		display: none;
+	}
+}
+
+@include tablet-only {
+
+	.hide-tablet {
+		display: none;
+	}
+}
+
+@include desktop-only {
+
+	.hide-desktop {
+		display: none;
+	}
+}
+
+@include widescreen-only {
+
+	.hide-widescreen {
+		display: none;
+	}
 }
