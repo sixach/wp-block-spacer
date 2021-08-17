@@ -1,9 +1,10 @@
+@import './prefix.scss';
 
 /**
  * The following styles get applied inside the editor only.
  */
 
-.wp-block-[prefix]-spacer {
+.wp-block-#{$prefix}-spacer {
 
 	&,
 	.block-library-spacer__resize-container {
