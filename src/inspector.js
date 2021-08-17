@@ -32,13 +32,13 @@ import { InspectorControls, __experimentalPanelColorGradientSettings as PanelCol
  * Inspector Controls appear in the post settings sidebar when a block is being edited.
  *
  * @see       https://github.com/WordPress/gutenberg/blob/master/packages/block-editor/src/components/inspector-controls/README.md
- * @param {Object}   props                    Block meta-data properties.
- * @param {Object}   props.attributes         Block attributes.
- * @param {Object}   props.backgroundColor    Background-color hex code and CSS class name.
- * @param {Function} props.setBackgroundColor Update background-color value.
- * @param {Function} props.useGradient        Update, get background gradient color.
- * @param {Function} props.handleOnChange     Update, spacer height.
- * @param {Object}   props.utils              Utility helper methods/variables.
+ * @param     {Object}      props                       Block meta-data properties.
+ * @param     {Object}      props.attributes            Block attributes.
+ * @param     {Object}      props.backgroundColor       Background-color hex code and CSS class name.
+ * @param     {Function}    props.setBackgroundColor    Update background-color value.
+ * @param     {Function}    props.useGradient           Update, get background gradient color.
+ * @param     {Function}    props.handleOnChange        Update, spacer height.
+ * @param     {Object}      props.utils                 Utility helper methods/variables.
  * @return    {WPElement}                               Inspector element to render.
  */
 export default function Inspector( { attributes, backgroundColor, setBackgroundColor, useGradient, handleOnChange, utils } ) {
