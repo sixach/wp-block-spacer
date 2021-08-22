@@ -20,6 +20,7 @@
 	"author": "sixa AG",
 	"main": "build/index.js",
 	"scripts": {
+		"analyze-bundles": "npm run build -- --webpack-bundle-analyzer",
 		"dev": "wp-scripts start",
 		"build": "wp-scripts build",
 		"format": "wp-scripts format",
@@ -28,9 +29,6 @@
 		"lint:js": "wp-scripts lint-js",
 		"lint:js-fix": "wp-scripts lint-js --fix",
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
-		"lint:php": "composer lint:php",
-		"lint:wpcs": "composer lint:wpcs",
-		"lint:wpcs-fix": "composer lint:wpcbf",
 		"packages-update": "wp-scripts packages-update",
 		"prepare": "husky install"
 	},
@@ -57,7 +55,7 @@
 	"devDependencies": {
 		"@sixach/wp-block-utils": "^1.0.1",
 		"@wordpress/base-styles": "^3.6.0",
-		"@wordpress/scripts": "17.1.0",
+		"@wordpress/scripts": "^17.1.0",
 		"classnames": "2.3.1",
 		"husky": "^7.0.1",
 		"lint-staged": "11.1.2",
