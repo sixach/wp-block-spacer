@@ -1,7 +1,7 @@
 /**
  * Utility for libraries from the `Lodash`.
  */
-import { get } from 'lodash';
+import get from 'lodash/get';
 
 /**
  * Utility helper methods specific for Sixa projects.
