@@ -1,0 +1,62 @@
+@import "~@wordpress/base-styles/breakpoints";
+
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ */
+
+@mixin mobile-only {
+
+	@media (max-width: #{$break-medium - 1}) {
+		@content;
+	}
+}
+
+@mixin tablet-only {
+
+	@media (min-width: #{$break-medium}) and (max-width: #{$break-large - 1}) {
+		@content;
+	}
+}
+
+@mixin desktop-only {
+
+	@media (min-width: #{$break-large}) and (max-width: #{$break-wide - 1}) {
+		@content;
+	}
+}
+
+@mixin widescreen-only {
+
+	@media (min-width: #{$break-wide}) {
+		@content;
+	}
+}
+
+@include mobile-only {
+
+	.hide-mobile {
+		display: none;
+	}
+}
+
+@include tablet-only {
+
+	.hide-tablet {
+		display: none;
+	}
+}
+
+@include desktop-only {
+
+	.hide-desktop {
+		display: none;
+	}
+}
+
+@include widescreen-only {
+
+	.hide-widescreen {
+		display: none;
+	}
+}

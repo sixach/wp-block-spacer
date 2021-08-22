@@ -24,7 +24,7 @@ import { withSelect, useDispatch } from '@wordpress/data';
  *
  * @see    https://github.com/WordPress/gutenberg/blob/trunk/packages/compose/README.md
  */
-import { compose, withInstanceId } from '@wordpress/compose';
+import { compose } from '@wordpress/compose';
 
 /**
  * WordPress specific abstraction layer atop React.
@@ -77,15 +77,15 @@ import Inspector from './inspector';
  *
  * @see    https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
-import './editor.css';
+import './editor.scss';
 
 /**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
  *
  * @see       https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#edit
- * @param     {Object}      props    Block meta-data properties.
- * @return    {WPElement}            Element to render.
+ * @param     {Object}         props    Block meta-data properties.
+ * @return    {JSX.Element}             Element to render.
  */
 function Edit( props ) {
 	const styles = {};
@@ -161,7 +161,6 @@ function Edit( props ) {
 }
 
 export default compose( [
-	withInstanceId,
 	withColors( 'backgroundColor' ),
 	withSelect( () => {
 		return {

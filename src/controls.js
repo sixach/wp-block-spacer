@@ -30,30 +30,29 @@ import { sprintf, _x } from '@wordpress/i18n';
  * The BlockToolbar component is used to render a toolbar that serves as a wrapper for number of options for each block.
  *
  * @see       https://github.com/WordPress/gutenberg/blob/trunk/packages/block-editor/src/components/block-toolbar/README.md
- * @param     {Object}      props                  Block meta-data properties.
- * @param     {Object}      props.attributes       Block attributes.
- * @param     {Function}    props.setAttributes    Update block attributes.
- * @return    {WPElement}                          Toolbar element to render.
+ * @param     {Object}         props               	  Block meta-data properties.
+ * @param     {Object}         props.attributes    	  Block attributes.
+ * @param     {Function}       props.setAttributes    Update block attributes.
+ * @return    {JSX.Element}                           Toolbar element to render.
  */
 export default function Controls( { attributes, setAttributes } ) {
 	const { visible } = attributes;
 	const handleOnChange = ( key, value ) => setAttributes( { visible: merge( {}, visible, { [ key ]: ! value } ) } );
+
 	return (
-		<>
-			<BlockControls group="block">
-				<ToolbarGroup
-					controls={ map( visible, ( value, key ) => ( {
-						icon: <Dashicon icon={ key } />,
-						title: sprintf(
-							/* translators: %s: Device name. */
-							_x( 'Hide on %s?', 'visibility toolbar title', 'sixa' ),
-							lowerCase( get( attributes, `${ key }.label` ) )
-						),
-						onClick: () => handleOnChange( key, value ),
-						isActive: eq( ! value, false ),
-					} ) ) }
-				/>
-			</BlockControls>
-		</>
+		<BlockControls group="block">
+			<ToolbarGroup
+				controls={ map( visible, ( value, key ) => ( {
+					icon: <Dashicon icon={ key } />,
+					title: sprintf(
+						/* translators: %s: Device name. */
+						_x( 'Hide on %s?', 'visibility toolbar title', 'sixa' ),
+						lowerCase( get( attributes, `${ key }.label` ) )
+					),
+					onClick: () => handleOnChange( key, value ),
+					isActive: eq( ! value, false ),
+				} ) ) }
+			/>
+		</BlockControls>
 	);
 }

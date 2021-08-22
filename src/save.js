@@ -3,7 +3,7 @@
 /**
  * Utility for libraries from the `Lodash`.
  */
-import { set } from 'lodash';
+import set from 'lodash/set';
 
 /**
  * Utility for conditionally joining CSS class names together.
@@ -29,9 +29,9 @@ import utils from './utils';
  * editor into `post_content`.
  *
  * @see       https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#save
- * @param     {Object}    props               Block meta-data properties.
- * @param     {Object}    props.attributes    Block attributes.
- * @return    {WPElement}                     Element to render.
+ * @param     {Object}         props               Block meta-data properties.
+ * @param     {Object}         props.attributes    Block attributes.
+ * @return    {JSX.Element}                        Element to render.
  */
 export default function save( { attributes } ) {
 	const { height, visible, backgroundColor, customBackgroundColor, gradient, customGradient } = attributes;

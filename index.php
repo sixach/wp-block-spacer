@@ -1,15 +1,21 @@
 <?php
 /**
- * Plugin Name:     Sixa - Spacer
- * Description:     Spacer block for WordPress editor.
- * Version:         1.0.0
- * Author:          sixa AG
- * License:         GPL-3.0-or-later
- * License URI:     https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain:     sixa
+ * Spacer Block.
  *
- * @package         sixa
+ * @wordpress-plugin
+ * Plugin Name:          Sixa - Spacer
+ * Description:          Spacer block for WordPress editor.
+ * Version:              1.0.0
+ * Requires at least:    5.8
+ * Requires PHP:         7.4
+ * Author:               sixa AG
+ * License:              GPL v3 or later
+ * License URI:          https://www.gnu.org/licenses/gpl-3.0.html
+ * Text Domain:          sixa
+ *
+ * @package              sixa
  */
+
 namespace SixaSpacerBlock;
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
@@ -23,7 +29,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
  * @since     1.0.0
  * @return    void
  */
-function register_block() {
+function register_block(): void {
 	register_block_type_from_metadata( __DIR__ );
 }
 add_action( 'init', __NAMESPACE__ . '\register_block' );
