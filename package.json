@@ -34,11 +34,6 @@
 		"packages-update": "wp-scripts packages-update",
 		"prepare": "husky install"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
 	"lint-staged": {
 		"*.css": [
 			"npm run lint:css"
