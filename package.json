@@ -53,7 +53,8 @@
 		"prop-types": "^15.7.2"
 	},
 	"devDependencies": {
-		"@sixach/wp-block-utils": "^1.0.1",
+		"@sixa/wp-block-utils": "^1.0.3",
+		"@sixa/wp-react-hooks": "1.1.1",
 		"@wordpress/base-styles": "^3.6.0",
 		"@wordpress/scripts": "^17.1.0",
 		"classnames": "2.3.1",
