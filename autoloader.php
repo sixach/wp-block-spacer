@@ -53,12 +53,12 @@ spl_autoload_register(
 		 * We ignore the first index since it's always the top-level package. The last index is always
 		 * the file so we append that at the end.
 		 */
-		$fully_qualified_path = sprintf( '%sblock/', trailingslashit( dirname( __FILE__ ) ) );
+		$fully_qualified_path = sprintf( '%s/block/', dirname( __FILE__ ) );
 		$count_file_path      = count( $file_path );
 
 		for ( $i = 1; $i < $count_file_path - 1; $i++ ) {
 			$dir                   = strtolower( $file_path[ $i ] );
-			$fully_qualified_path .= trailingslashit( $dir );
+			$fully_qualified_path .= $dir;
 		}
 
 		$fully_qualified_path .= $file_name;
