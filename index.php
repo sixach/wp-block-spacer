@@ -20,19 +20,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 
 use SixaSpacerBlock\Block;
 
-/**
- * Require Composer autoload file to enable access to files
- * and classes that are imported from Composer packages.
- *
- * @see     https://getcomposer.org/doc/01-basic-usage.md#autoloading
- */
 require __DIR__ . '/vendor/autoload.php';
 
 $block = new Block();
 $block->init();
-
-/**
- * Require the block initialization file that contains all block features
- * as well as block registration and asset management.
- */
-//require_once sprintf( '%sblock.php', plugin_dir_path( __FILE__ ) );
