@@ -18,8 +18,8 @@
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 
-use Sixa\SpacerBlock;
+use Sixa_Blocks\Spacer;
 
 require __DIR__ . '/vendor/autoload.php';
 
-SpacerBlock::init();
+Spacer::init();
