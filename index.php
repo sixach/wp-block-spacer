@@ -18,9 +18,9 @@
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 
-use SixaSpacerBlock\Block;
+use Sixa\SpacerBlock;
 
 require __DIR__ . '/vendor/autoload.php';
 
-$block = new Block();
+$block = new SpacerBlock();
 $block->init();

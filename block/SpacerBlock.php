@@ -1,8 +1,8 @@
 <?php
 
-namespace SixaSpacerBlock;
+namespace Sixa;
 
-class Block {
+class SpacerBlock {
 
 	public function init(): void {
 		add_action( 'init', array( $this, 'register' ) );
