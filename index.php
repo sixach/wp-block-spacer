@@ -22,5 +22,4 @@ use Sixa\SpacerBlock;
 
 require __DIR__ . '/vendor/autoload.php';
 
-$block = new SpacerBlock();
-$block->init();
+SpacerBlock::init();
