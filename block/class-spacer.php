@@ -10,6 +10,7 @@
  * @package       Sixa_Blocks
  * @subpackage    Sixa_Blocks\Spacer
  */
+
 namespace Sixa_Blocks;
 
 /**
@@ -18,8 +19,8 @@ namespace Sixa_Blocks;
 class Spacer {
 
 	/**
-	 * Initialize the block. Set up the WordPress hook to
-	 * register the block.
+	 * Initialize the block.
+	 * Set up the WordPress hook to register the block.
 	 *
 	 * @since     1.0.0
 	 * @return    void
