@@ -6,7 +6,7 @@ import get from 'lodash/get';
 /**
  * Utility helper methods specific for Sixa projects.
  */
-import { blockClassName } from '@sixach/wp-block-utils';
+import { blockClassName } from '@sixa/wp-block-utils';
 
 /**
  * Given a block object, returns a copy of the block object.
