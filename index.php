@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 use Sixa_Blocks\Spacer;
 
 // Composer autoload is needed in this package even if
-// it doesn't use any packages to autoload the classes
+// it doesn't use any libraries to autoload the classes
 // from this package.
 require __DIR__ . '/vendor/autoload.php';
 
