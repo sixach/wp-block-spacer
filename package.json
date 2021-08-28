@@ -38,7 +38,7 @@
 		],
 		"*.{js,ts,tsx}": [
 			"npm run lint:js",
-			"npm run format:js"
+			"npm run format"
 		]
 	},
 	"dependencies": {
