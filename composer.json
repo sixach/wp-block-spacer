@@ -30,6 +30,10 @@
 		{
 			"type": "vcs",
 			"url":  "git@github.com:sixach/wp-snippets.git"
+		},
+		{
+			"type": "vcs",
+			"url":  "git@github.com:sixach/wp-autoloader.git"
 		}
 	],
 	"scripts": {
@@ -38,6 +42,6 @@
 		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude node_modules ."
 	},
 	"autoload": {
-		"files": ["./autoloader.php"]
+		"classmap": ["block"]
 	}
 }
