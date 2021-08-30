@@ -29,6 +29,9 @@
 		"lint:js": "wp-scripts lint-js",
 		"lint:js-fix": "wp-scripts lint-js --fix",
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"lint:php": "composer lint:php",
+		"lint:wpcs": "composer lint:wpcs",
+		"lint:wpcs-fix": "composer lint:wpcbf",
 		"packages-update": "wp-scripts packages-update",
 		"prepare": "husky install"
 	},
@@ -38,7 +41,10 @@
 		],
 		"*.{js,ts,tsx}": [
 			"npm run lint:js",
-			"npm run format"
+			"npm run format:js"
+		],
+		"*.php": [
+			"npm run lint:wpcs"
 		]
 	},
 	"dependencies": {
