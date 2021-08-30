@@ -16,20 +16,13 @@
  * @package              sixa
  */
 
-namespace SixaSpacerBlock;
-
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 
-/**
- * Registers the block using the metadata loaded from the `block.json` file.
- * Behind the scenes, it registers also all assets so they can be enqueued
- * through the block editor in the corresponding context.
- *
- * @see       https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
- * @since     1.0.0
- * @return    void
- */
-function register_block(): void {
-	register_block_type_from_metadata( __DIR__ );
-}
-add_action( 'init', __NAMESPACE__ . '\register_block' );
+use Sixa_Blocks\Spacer;
+
+// Composer autoload is needed in this package even if
+// it doesn't use any libraries to autoload the classes
+// from this package.
+require __DIR__ . '/vendor/autoload.php';
+
+Spacer::init();
