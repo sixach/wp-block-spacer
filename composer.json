@@ -30,10 +30,6 @@
 		{
 			"type": "vcs",
 			"url":  "git@github.com:sixach/wp-snippets.git"
-		},
-		{
-			"type": "vcs",
-			"url":  "git@github.com:sixach/wp-autoloader.git"
 		}
 	],
 	"scripts": {
