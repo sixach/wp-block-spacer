@@ -1,17 +1,7 @@
 /**
- * Utility for libraries from the `Lodash`.
- */
-import get from 'lodash/get';
-
-/**
- * Utility helper methods specific for Sixa projects.
- */
-import { blockClassName } from '@sixa/wp-block-utils';
-
-/**
  * Given a block object, returns a copy of the block object.
  *
- * @see    https://github.com/WordPress/gutenberg/tree/HEAD/packages/blocks/README.md
+ * @see    https://developer.wordpress.org/block-editor/reference-guides/packages/packages-blocks/
  */
 import { createBlock, getBlockAttributes } from '@wordpress/blocks';
 
@@ -19,35 +9,33 @@ import { createBlock, getBlockAttributes } from '@wordpress/blocks';
  * Block Transforms is the API that allows a block to be transformed from and to other blocks, as well as from other entities.
  * Existing entities that work with this API include shortcodes, files, regular expressions, and raw DOM nodes.
  */
-const transforms = {
+export default {
 	from: [
 		{
-			type: 'block',
 			blocks: [ 'core/spacer' ],
 			transform: ( { height } ) =>
 				createBlock( 'sixa/spacer', {
 					height,
 				} ),
+			type: 'block',
 		},
 		{
 			type: 'raw',
-			selector: blockClassName( 'spacer' ),
-			transform: ( node ) =>
+			selector: 'wp-block-sixa-spacer',
+			transform: ( { outerHTML } ) =>
 				createBlock( 'sixa/spacer', {
-					...getBlockAttributes( 'sixa/spacer', get( node, 'outerHTML' ) ),
+					...getBlockAttributes( 'sixa/spacer', outerHTML ),
 				} ),
 		},
 	],
 	to: [
 		{
-			type: 'block',
 			blocks: [ 'core/spacer' ],
 			transform: ( { height } ) =>
 				createBlock( 'core/spacer', {
 					height,
 				} ),
+			type: 'block',
 		},
 	],
 };
-
-export default transforms;
