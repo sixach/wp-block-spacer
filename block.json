@@ -3,48 +3,46 @@
 	"name": "sixa/spacer",
 	"title": "Spacer",
 	"category": "design",
-	"icon": "block-default",
-	"description": "Spacer block for WordPress editor.",
+	"description": "Block to add empty vertical space (full-width).",
 	"keywords": [
-		"sixa",
-		"blank",
-		"margin",
-		"divider",
+		"sixa", 
+		"blank", 
+		"divider", 
+		"margin", 
 		"separator"
 	],
 	"supports": {
-		"html": false,
-		"anchor": true
+		"anchor": true,
+		"html": false
 	},
 	"attributes": {
-		"height": {
-            "type": "number",
-            "default": 100
-        },
-        "visible": {
-            "type": "object",
-            "default": {
-                "desktop": false,
-                "laptop": false,
-                "tablet": false,
-                "smartphone": false
-            }
-        },
 		"backgroundColor": {
 			"type": "string"
 		},
 		"customBackgroundColor": {
 			"type": "string"
 		},
+		"customGradient": {
+			"type": "string"
+		},
+		"height": {
+            "type": "number",
+            "default": 100
+        },
 		"gradient": {
 			"type": "string"
 		},
-		"customGradient": {
-			"type": "string"
-		}
+        "visible": {
+            "type": "object",
+            "default": {
+                "widescreen": false,
+                "laptop": false,
+                "tablet": false,
+                "mobile": false
+            }
+        }
 	},
-	"textdomain": "sixa",
+	"textdomain": "sixa-block-spacer",
 	"editorScript": "file:./build/index.js",
-	"editorStyle": "file:./build/index.css",
 	"style": "file:./build/style-index.css"
 }
