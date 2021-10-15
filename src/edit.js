@@ -3,42 +3,25 @@
 /**
  * Utility for libraries from the `Lodash`.
  */
-import { get, set, add, min, parseInt } from 'lodash';
+import { add, min, parseInt, set } from 'lodash';
 
 /**
- * Utility for conditionally joining CSS class names together.
+ * Helper React components specific for Sixa projects.
  */
-import classnames from 'classnames';
+import { VisibilityToolbar } from '@sixa/wp-block-components';
 
 /**
- * Data module to manage application state for both plugins and WordPress itself.
- * The data module is built upon and shares many of the same core principles of Redux.
+ * Helper React hooks specific for Sixa projects.
+ */
+import { useToggle, useVisibilityClassNames } from '@sixa/wp-react-hooks';
+
+/**
+ * React hook that is used to mark the block wrapper element.
+ * It provides all the necessary props like the class name.
  *
- * @see    https://github.com/WordPress/gutenberg/tree/HEAD/packages/data/README.md
+ * @see    https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/
  */
-import { withSelect, useDispatch } from '@wordpress/data';
-
-/**
- * The compose package is a collection of handy Hooks and Higher Order Components (HOCs).
- * The compose function is an alias to `flowRight` from Lodash.
- *
- * @see    https://github.com/WordPress/gutenberg/blob/trunk/packages/compose/README.md
- */
-import { compose } from '@wordpress/compose';
-
-/**
- * WordPress specific abstraction layer atop React.
- *
- * @see    https://github.com/WordPress/gutenberg/tree/HEAD/packages/element/README.md
- */
-import { useState } from '@wordpress/element';
-
-/**
- * Primitives to be used cross-platform.
- *
- * @see    https://github.com/WordPress/gutenberg/blob/trunk/packages/primitives/README.md
- */
-import { View } from '@wordpress/primitives';
+import { useBlockProps, withColors, __experimentalUseGradient } from '@wordpress/block-editor';
 
 /**
  * This packages includes a library of generic WordPress components to be used for
@@ -49,122 +32,136 @@ import { View } from '@wordpress/primitives';
 import { ResizableBox } from '@wordpress/components';
 
 /**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
+ * Data module to manage application state for both plugins and WordPress itself.
+ * The data module is built upon and shares many of the same core principles of Redux.
  *
- * @see    https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
+ * @see    https://developer.wordpress.org/block-editor/reference-guides/packages/packages-data/
  */
-import { useBlockProps, withColors, __experimentalUseGradient } from '@wordpress/block-editor';
+import { useDispatch } from '@wordpress/data';
 
 /**
- * Utility helper methods/variables.
+ * WordPress specific abstraction layer atop React.
+ *
+ * @see    https://developer.wordpress.org/block-editor/reference-guides/packages/packages-element/
  */
-import utils from './utils';
+import { useMemo } from '@wordpress/element';
 
 /**
- * Block Toolbar controls settings.
+ * Primitives to be used cross-platform.
+ *
+ * @see    https://developer.wordpress.org/block-editor/reference-guides/packages/packages-primitives/
  */
-import Controls from './controls';
+import { View } from '@wordpress/primitives';
+
+/**
+ * Utility for conditionally joining CSS class names together.
+ */
+import classnames from 'classnames';
 
 /**
  * Inspector Controls sidebar settings.
  */
-import Inspector from './inspector';
-
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see    https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-import './editor.scss';
+import Inspector from './components/Inspector';
 
 /**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
  *
- * @see       https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#edit
- * @param     {Object}         props    Block meta-data properties.
- * @return    {JSX.Element}             Element to render.
+ * @see 	  https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#edit
+ * @param 	  {Object}         props    		           Block meta-data properties.
+ * @param 	  {Object} 	       props.attributes            Block attributes.
+ * @param 	  {Object} 	       props.backgroundColor       An object containing the background background-color class name and a hex value of it.
+ * @param 	  {boolean} 	   props.isSelected    	  	   Whether or not the block is currently selected.
+ * @param 	  {Function} 	   props.setAttributes         Update block attributes.
+ * @param 	  {Function} 	   props.setBackgroundColor    Function to update the background background-color.
+ * @return    {JSX.Element} 			  		           Element to render.
  */
-function Edit( props ) {
+function Edit( { attributes, backgroundColor, isSelected, setAttributes, setBackgroundColor } ) {
 	const styles = {};
-	const thresholds = get( utils, 'thresholds' );
-	const [ isResizing, setIsResizing ] = useState( false );
-	const { isSelected, attributes, setAttributes, backgroundColor, useGradient } = props;
 	const { height, visible } = attributes;
-	const { gradientValue } = useGradient;
+	const [ isResizing, toggleIsResizing ] = useToggle();
 	const { toggleSelection } = useDispatch( 'core/block-editor' );
+	const blockProps = useBlockProps();
+	const visibilityClassNames = useVisibilityClassNames( visible );
 	const onResizeStart = () => toggleSelection( false );
 	const onResizeStop = () => toggleSelection( true );
-	const handleOnChange = ( newHeight ) => setAttributes( { height: newHeight } );
 	const handleOnResizeStart = ( ...args ) => {
 		onResizeStart( ...args );
-		setIsResizing( true );
+		toggleIsResizing();
 	};
 	const handleOnResizeStop = ( event, direction, elt, delta ) => {
 		onResizeStop();
-		const spacerHeight = min( [ parseInt( add( height, get( delta, 'height' ) ), 10 ), get( thresholds, 'size.max' ) ] );
-		handleOnChange( spacerHeight );
-		setIsResizing( false );
+		setAttributes( {
+			height: min( [ parseInt( add( height, delta?.height ), 10 ), 1000 ] ),
+		} );
+		toggleIsResizing( false );
 	};
+	const { gradientClass: backgroundGradientClass, gradientValue: backgroundGradientValue, setGradient: setBackgroundGradient } = __experimentalUseGradient();
+	const { backgroundColorClass, backgroundColorValue } = useMemo(
+		() => ( {
+			backgroundColorClass: backgroundColor?.class,
+			backgroundColorValue: backgroundColor?.color,
+		} ),
+		[ backgroundColor ]
+	);
+	const classNames = classnames( 'block-library-spacer__resize-container', visibilityClassNames, {
+		'is-selected': isSelected,
+		'has-background': backgroundColorClass || backgroundColorValue,
+		'has-background-gradient': backgroundGradientClass || backgroundGradientValue,
+		[ backgroundColorClass ]: backgroundColorClass,
+		[ backgroundGradientClass ]: backgroundGradientClass,
+	} );
 
-	if ( get( backgroundColor, 'color' ) ) {
-		set( styles, 'backgroundColor', get( backgroundColor, 'color' ) );
+	if ( ! backgroundColorClass ) {
+		set( styles, 'backgroundColor', backgroundColorValue );
 	}
 
-	if ( gradientValue ) {
-		set( styles, 'background', gradientValue );
+	if ( backgroundGradientValue ) {
+		set( styles, 'background', backgroundGradientValue );
 	}
 
 	return (
-		<>
-			<View { ...useBlockProps() }>
-				<ResizableBox
-					className={ classnames( 'block-library-spacer__resize-container', utils.visibilityClassNames( visible ), {
-						'is-selected': isSelected,
-					} ) }
-					style={ { ...styles } }
-					size={ {
-						height,
-					} }
-					minHeight={ get( thresholds, 'size.min' ) }
-					enable={ {
-						top: false,
-						right: false,
-						bottom: true,
-						left: false,
-						topRight: false,
-						bottomRight: false,
-						bottomLeft: false,
-						topLeft: false,
-					} }
-					onResizeStart={ handleOnResizeStart }
-					onResizeStop={ handleOnResizeStop }
-					showHandle={ isSelected }
-					__experimentalShowTooltip={ true }
-					__experimentalTooltipProps={ {
-						axis: 'y',
-						position: 'bottom',
-						isVisible: isResizing,
-					} }
-				/>
-			</View>
-			{ isSelected && (
-				<>
-					<Controls { ...props } />
-					<Inspector { ...props } handleOnChange={ handleOnChange } utils={ utils } />
-				</>
-			) }
-		</>
+		<View { ...blockProps }>
+			<ResizableBox
+				className={ classNames }
+				css={ {
+					marginBottom: 0,
+				} }
+				enable={ {
+					bottom: true,
+					bottomLeft: false,
+					bottomRight: false,
+					left: false,
+					right: false,
+					top: false,
+					topLeft: false,
+					topRight: false,
+				} }
+				maxHeight={ 500 }
+				minHeight={ 1 }
+				onResizeStart={ handleOnResizeStart }
+				onResizeStop={ handleOnResizeStop }
+				size={ {
+					height,
+				} }
+				showHandle={ isSelected }
+				style={ { ...styles } }
+				__experimentalShowTooltip={ true }
+				__experimentalTooltipProps={ {
+					axis: 'y',
+					isVisible: isResizing,
+					position: 'bottom',
+				} }
+			/>
+			<VisibilityToolbar onChange={ ( value ) => setAttributes( { ...value } ) } shouldRender={ isSelected } value={ visible } />
+			<Inspector
+				attributes={ attributes }
+				backgroundColor={ { backgroundColorValue, setBackgroundColor } }
+				backgroundGradient={ { backgroundGradientValue, setBackgroundGradient } }
+				setAttributes={ setAttributes }
+			/>
+		</View>
 	);
 }
 
-export default compose( [
-	withColors( 'backgroundColor' ),
-	withSelect( () => {
-		return {
-			useGradient: __experimentalUseGradient(),
-		};
-	} ),
-] )( Edit );
+export default withColors( 'backgroundColor' )( Edit );
