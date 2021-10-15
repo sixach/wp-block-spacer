@@ -5,7 +5,7 @@
  * @link          https://sixa.ch
  * @author        sixa AG <info@sixa.ch>
  *
- * @since         1.0.0
+ * @since         1.2.0
  * @package       Sixa_Blocks
  * @subpackage    Sixa_Blocks\Spacer
  */
@@ -27,7 +27,7 @@ if ( ! class_exists( Spacer::class ) ) :
 		 * through the block editor in the corresponding context.
 		 *
 		 * @see       https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
-		 * @since     1.0.0
+		 * @since     1.2.0
 		 * @return    void
 		 */
 		public static function register(): void {
