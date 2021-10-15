@@ -1,9 +1,11 @@
-@import "~@wordpress/base-styles/breakpoints";
 
 /**
- * The following styles get applied both on the front of your site
- * and in the editor.
- */
+* The following styles get applied both on the front of your site
+* and in the editor.
+*/
+
+@import "~@wordpress/base-styles/breakpoints";
+$prefix: sixa;
 
 @mixin mobile-only {
 
@@ -34,29 +36,25 @@
 }
 
 @include mobile-only {
-
-	.hide-mobile {
+	.#{$prefix}-hide-mobile {
 		display: none;
 	}
 }
 
 @include tablet-only {
-
-	.hide-tablet {
+	.#{$prefix}-hide-tablet {
 		display: none;
 	}
 }
 
 @include desktop-only {
-
-	.hide-desktop {
+	.#{$prefix}-hide-desktop {
 		display: none;
 	}
 }
 
 @include widescreen-only {
-
-	.hide-widescreen {
+	.#{$prefix}-hide-widescreen {
 		display: none;
 	}
 }
