@@ -1,6 +1,6 @@
 {
 	"name": "@sixach/wp-block-spacer",
-	"version": "1.0.0",
+	"version": "1.2.0",
 	"private": true,
 	"description": "Block to add empty vertical space (full-width).",
 	"keywords": [
