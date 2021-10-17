@@ -3,10 +3,10 @@
 	"type": "wordpress-block",
 	"description": "Block to add empty vertical space (full-width).",
 	"keywords": [
-		"sixa", 
-		"blank", 
-		"divider", 
-		"margin", 
+		"sixa",
+		"blank",
+		"divider",
+		"margin",
 		"separator"
 	],
 	"homepage": "https://www.sixa.ch",
@@ -19,19 +19,8 @@
 	],
 	"require": {
 		"php": ">=7.3",
-		"sixach/wp-snippets": "^1.4.0",
-		"sixach/wp-block-api": "^1.0.1"
+		"sixach/wp-block-api": "^1.0.2"
 	},
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "git@github.com:sixach/wp-block-api.git"
-		},
-		{
-		  "type": "vcs",
-		  "url": "git@github.com:sixach/wp-snippets.git"
-		}
-	],
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
 		"wp-coding-standards/wpcs": "^2.3.0",
