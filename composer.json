@@ -1,11 +1,12 @@
 {
 	"name": "sixach/wp-block-spacer",
 	"type": "wordpress-block",
-	"description": "Spacer block for WordPress editor.",
+	"description": "Block to add empty vertical space (full-width).",
 	"keywords": [
+		"sixa",
 		"blank",
-		"margin",
 		"divider",
+		"margin",
 		"separator"
 	],
 	"homepage": "https://www.sixa.ch",
@@ -17,27 +18,24 @@
 		}
 	],
 	"require": {
-		"php": ">=7.2"
+		"php": ">=7.3",
+		"sixach/wp-block-api": "^1.0.2"
 	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
 		"wp-coding-standards/wpcs": "^2.3.0",
 		"phpunit/phpunit": "^7",
 		"phpcompatibility/phpcompatibility-wp": "^2.1",
-		"php-parallel-lint/php-parallel-lint": "^1.2.0"
+		"php-parallel-lint/php-parallel-lint": "^1.2.0",
+		"wp-cli/i18n-command": "^2.2.6"
 	},
-	"repositories": [
-		{
-			"type": "vcs",
-			"url":  "git@github.com:sixach/wp-snippets.git"
-		}
-	],
 	"scripts": {
 		"lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
 		"lint:wpcbf": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf",
-		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude node_modules ."
+		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude node_modules .",
+		"make-pot": "wp i18n make-pot . languages/sixa-block-spacer.pot --exclude=build"
 	},
 	"autoload": {
-		"classmap": ["block"]
+		"classmap": [ "block" ]
 	}
 }

@@ -1,14 +1,9 @@
 /* eslint-disable @wordpress/no-unsafe-wp-apis */
 
 /**
- * Utility for libraries from the `Lodash`.
+ * Helper React hooks specific for Sixa projects.
  */
-import set from 'lodash/set';
-
-/**
- * Utility for conditionally joining CSS class names together.
- */
-import classnames from 'classnames';
+import { useVisibilityClassNames } from '@sixa/wp-react-hooks';
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -19,9 +14,9 @@ import classnames from 'classnames';
 import { useBlockProps, getColorClassName, __experimentalGetGradientClass } from '@wordpress/block-editor';
 
 /**
- * Utility helper methods/variables.
+ * Utility for conditionally joining CSS class names together.
  */
-import utils from './utils';
+import classnames from 'classnames';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -33,30 +28,27 @@ import utils from './utils';
  * @param     {Object}         props.attributes    Block attributes.
  * @return    {JSX.Element}                        Element to render.
  */
-export default function save( { attributes } ) {
-	const { height, visible, backgroundColor, customBackgroundColor, gradient, customGradient } = attributes;
+function save( { attributes } ) {
+	const { backgroundColor, customBackgroundColor, customGradient: customBackgroundGradient, height, gradient: backgroundGradient, visible } = attributes;
 	const backgroundColorClass = getColorClassName( 'background-color', backgroundColor );
-	const gradientClass = __experimentalGetGradientClass( gradient );
-	const styles = { height };
+	const backgroundGradientClass = __experimentalGetGradientClass( backgroundGradient );
+	const visibilityClassNames = useVisibilityClassNames.save( visible );
+	const blockProps = useBlockProps.save( {
+		ariaHidden: true,
+		className: classnames( visibilityClassNames, {
+			'has-background': backgroundColorClass || customBackgroundColor,
+			'has-background-gradient': backgroundGradientClass || customBackgroundGradient,
+			[ backgroundColorClass ]: backgroundColorClass,
+			[ backgroundGradientClass ]: backgroundGradientClass,
+		} ),
+		style: {
+			backgroundColor: customBackgroundColor,
+			background: customBackgroundGradient,
+			height,
+		},
+	} );
 
-	if ( ! backgroundColorClass ) {
-		set( styles, 'backgroundColor', customBackgroundColor );
-	}
-
-	if ( customGradient ) {
-		set( styles, 'background', customGradient );
-	}
-
-	return (
-		<div
-			{ ...useBlockProps.save( {
-				className: classnames( utils.visibilityClassNames( visible ), {
-					[ backgroundColorClass ]: backgroundColorClass,
-					[ gradientClass ]: gradientClass,
-				} ),
-				style: { ...styles },
-			} ) }
-			aria-hidden
-		/>
-	);
+	return <div { ...blockProps } />;
 }
+
+export default save;
