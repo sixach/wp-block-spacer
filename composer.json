@@ -1,7 +1,7 @@
 {
 	"name": "sixach/wp-block-spacer",
 	"type": "wordpress-block",
-	"description": "Add empty vertical space to your page. Responsively for desktop and mobile devices. Supports background colors and gradients.",
+	"description": "Add empty vertical space to your page. Responsive for desktop and mobile devices. Supports background colors and gradients.",
 	"keywords": [
 		"sixa",
 		"blank",
