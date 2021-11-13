@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Sixa Spacer Block ===
 Contributors: sixa, mahdiyazdani, gookaani, kuserich
 Donate link: https://sixa.com/
 Tags: block, gutenberg, space, divider, separator, margin, sixa
