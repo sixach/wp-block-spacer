@@ -68,7 +68,7 @@ We welcome contributions of any form, and you can help reporting, testing, and d
 Here’s the [GitHub development repository &#8594;](https://github.com/sixach/wp-block-spacer "GitHub development repository")
 
 = Did you like the idea behind this plugin? =
-Please share your experience by leaving this plugin [5 star review](https://wordpress.org/support/plugin/sixa-spacer-block/reviews/ "Rate Block Data Attribute 5 stars") if you like it. Thank you!
+Please share your experience by leaving this plugin a [5 star review](https://wordpress.org/support/plugin/sixa-spacer-block/reviews/ "sixa Spacer Block 5 stars") if you like it. Thank you!
 
 = I need help customizing this plugin? =
 We are an online marketing agency specializing in creating tailor-made software for WordPress and WooCommerce.
