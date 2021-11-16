@@ -76,7 +76,7 @@ If you need professional support for this or any other WordPress project, please
 
 == Screenshots ==
 
-1. Nothing yet.
+1. Add "Spacer" block
 
 == Changelog ==
 = 1.2.0 =
