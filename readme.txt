@@ -93,4 +93,15 @@ If you need professional support for this or any other WordPress project, please
 * Setup composer autoload
 
 = 1.0.0 =
-* Initial release.
+* Initial release
+
+== Upgrade Notice ==
+
+= 1.2.0 =
+Initial wordpress.org release. Refined code base, fully compatible with all sixa libraries and other sixa blocks and extensions.
+
+= 1.1.0 =
+Refactored version.
+
+= 1.0.0 =
+Initial version of sixa Spacer Block.
