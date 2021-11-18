@@ -9,6 +9,7 @@
 .prettierrc.js
 .stylelintignore
 .stylelintrc.js
+.wordpress-org
 babel.config.js
 composer.json
 composer.lock
