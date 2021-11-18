@@ -68,7 +68,7 @@ We welcome contributions of any form, and you can help reporting, testing, and d
 Here’s the [GitHub development repository &#8594;](https://github.com/sixach/wp-block-spacer "GitHub development repository")
 
 = Did you like the idea behind this plugin? =
-Please share your experience by leaving this plugin [5 star review](https://wordpress.org/support/plugin/sixa-spacer-block/reviews/ "Rate Block Data Attribute 5 stars") if you like it. Thank you!
+Please share your experience by leaving this plugin a [5 star review](https://wordpress.org/support/plugin/sixa-spacer-block/reviews/ "sixa Spacer Block 5 stars") if you like it. Thank you!
 
 = I need help customizing this plugin? =
 We are an online marketing agency specializing in creating tailor-made software for WordPress and WooCommerce.
@@ -76,7 +76,7 @@ If you need professional support for this or any other WordPress project, please
 
 == Screenshots ==
 
-1. Nothing yet.
+1. Add "Spacer" block
 
 == Changelog ==
 = 1.2.0 =
@@ -93,4 +93,15 @@ If you need professional support for this or any other WordPress project, please
 * Setup composer autoload
 
 = 1.0.0 =
-* Initial release.
+* Initial release
+
+== Upgrade Notice ==
+
+= 1.2.0 =
+Initial wordpress.org release. Refined code base, fully compatible with all sixa libraries and other sixa blocks and extensions.
+
+= 1.1.0 =
+Refactored version.
+
+= 1.0.0 =
+Initial version of sixa Spacer Block.

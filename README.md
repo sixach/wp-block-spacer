@@ -29,3 +29,17 @@ on your computer in order to build this theme.
 * Run `npm install` to install NPM dependencies
 * Run `npm run build` to compile assets for production
 * Run `composer install --no-dev --optimize-autoloader` to install composer packages required in production
+
+## Translators
+The plugin is fully translation-ready and localized using the GNU framework.
+Translators are welcome to contribute to the plugin. Please use the [WordPress translation website](https://translate.wordpress.org/projects/wp-plugins/sixa-spacer-block/).
+
+## Contributors
+We welcome contributions of any form.
+
+## Support
+All support is handled via the dedicated [WordPress plugin support forum](https://wordpress.org/support/plugin/sixa-spacer-block).
+If you have any question or issues, please create a new topic in the WordPress plugin support forum.
+
+## Rate ⭐⭐⭐⭐⭐
+Please share your experience by leaving this plugin a [5 star review](https://wordpress.org/support/plugin/sixa-spacer-block/reviews/ "Rate sixa Spacer Block 5 stars") if you like it. Thank you!
