@@ -76,6 +76,6 @@
 		"@sixa/wp-scripts": "1.0.0",
 		"@wordpress/scripts": "19.1.0",
 		"husky": "^7.0.4",
-		"lint-staged": "11.2.6"
+		"lint-staged": "12.1.2"
 	}
 }
