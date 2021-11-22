@@ -1,5 +1,7 @@
 # Spacer Block
 
+![Sixa Spacer Block](https://ps.w.org/sixa-spacer-block/assets/banner-772x250.jpg?rev=2632168)
+
 Add vertical space to your page with the sixa Spacer Block.
 The block is fully responsive for widescreen, desktop, tablet,
 and mobile devices and allows you to hide a Spacer Block for

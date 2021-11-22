@@ -44,26 +44,26 @@ Automatic updates should work smoothly, but we still recommend you back up your 
 == Frequently Asked Questions ==
 
 = How do I use the block? =
-1. Log in to your WordPress website and navigate to the Dashboard
-2. Create a new page by visiting *Pages* > *Add new* or open an existing page in *Pages*
-3. Click on the Block Inserter button in top left and click on the *Spacer* block in the *Design* section. Alternatively, you may start typing `/spacer` in a new paragraph block and then press enter
-4. Once you’ve inserted the block, you can use the block settings sidebar to configure the block height and background color. Alternatively, you may also configure the height of the block by dragging on the circle knob on the bottom edge of the block
-5. In the block controls directly above the block in the editor, you may toggle the visibility of the block for different devices
-6. To add more space than the maximum the block allows with its height, simply add multiple Spacer Blocks to your page
-7. Publish the page
+1. Log in to your WordPress website and navigate to the Dashboard.
+2. Create a new page by visiting *Pages* > *Add new* or open an existing page in *Pages*.
+3. Click on the Block Inserter button in the top left and click on the *Spacer* block in the *Design* section. Alternatively, you may start typing `/spacer` in a new paragraph block and press enter.
+4. Once you’ve inserted the block, you can use the block settings sidebar to configure the block height and background color. Alternatively, you may also configure the height of the block by dragging on the circle knob on the bottom edge of the block.
+5. In the block controls directly above the block in the editor, you may toggle the visibility of the block for different devices.
+6. To add more space than the maximum the block allows with its height, simply add multiple Spacer Blocks to your page.
+7. Publish the page.
 
 = How do I get help with the plugin? =
-The easiest way to receive support is to “Create a new topic” by visiting Community Forums page [here](https://wordpress.org/support/plugin/sixa-spacer-block "Sixa Spacer Block Support Forum").
+The easiest way to receive support is to “Create a new topic” by visiting the [Community Forums page](https://wordpress.org/support/plugin/sixa-spacer-block "Sixa Spacer Block Support Forum").
 
-Make sure to check the “Notify me of follow-up replies via email” checkbox to receive notifications, as soon as a reply posted to your question or inquiry.
+Make sure to check the “Notify me of follow-up replies via email” checkbox to receive notifications, as soon as a reply is posted to your question or inquiry.
 
 = Can I help translating this plugin into a new language? =
-The plugin is fully translation-ready and localized using the GNU framework, and translators are welcome to contribute to the plugin.
+The plugin is fully translation-ready and localized using the GNU framework. Translators are welcome to contribute to the plugin.
 
 Here’s the the [WordPress translation website &#8594;](https://translate.wordpress.org/projects/wp-plugins/sixa-spacer-block "WordPress translation website")
 
 = How do I contribute to this plugin? =
-We welcome contributions of any form, and you can help reporting, testing, and detailing bugs.
+We welcome contributions of any form and you can help reporting, testing, and detailing bugs.
 
 Here’s the [GitHub development repository &#8594;](https://github.com/sixach/wp-block-spacer "GitHub development repository")
 
