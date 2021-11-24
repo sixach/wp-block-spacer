@@ -13,6 +13,7 @@ import Edit from './Edit';
 import Icon from './Icon';
 import save from './save';
 import transforms from './transforms';
+import './extensions';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
