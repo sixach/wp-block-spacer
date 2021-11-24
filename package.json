@@ -63,6 +63,7 @@
 		"@wordpress/compose": "5.0.6",
 		"@wordpress/data": "6.1.4",
 		"@wordpress/element": "4.0.4",
+		"@wordpress/hooks": "3.2.2",
 		"@wordpress/i18n": "4.2.4",
 		"@wordpress/primitives": "3.0.4",
 		"classnames": "2.3.1",
