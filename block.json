@@ -5,13 +5,14 @@
 	"category": "design",
 	"description": "Block to add empty vertical space (full-width).",
 	"keywords": [
-		"sixa", 
-		"blank", 
-		"divider", 
-		"margin", 
+		"sixa",
+		"blank",
+		"divider",
+		"margin",
 		"separator"
 	],
 	"supports": {
+		"align": [ "wide", "full" ],
 		"anchor": true,
 		"html": false
 	},
