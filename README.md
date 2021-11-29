@@ -3,11 +3,10 @@
 ![Sixa Spacer Block](https://ps.w.org/sixa-spacer-block/assets/banner-772x250.jpg?rev=2632168)
 
 Add vertical space to your page with the sixa Spacer Block.
-The block is fully responsive for widescreen, desktop, tablet,
-and mobile devices and allows you to hide a Spacer Block for
-specific devices. Additionally, the Spacer Block supports 
-background colors as well as background gradients directly from
-your theme.
+The block is fully responsive and can be hidden specifically
+for any device (widescreen, desktop, tablet, mobile).
+Additionally, the Spacer Block supports background colors as well
+as background gradients directly from your theme.
 
 ## Requirements
 

@@ -14,11 +14,10 @@ Add empty vertical space to your page. Responsive for desktop and mobile devices
 == Description ==
 
 Add vertical space to your page with the sixa Spacer Block.
-The block is fully responsive for widescreen, desktop, tablet,
-and mobile devices and allows you to hide a Spacer Block for
-specific devices. Additionally, the Spacer Block supports
-background colors as well as background gradients directly from
-your theme.
+The block is fully responsive and can be hidden specifically
+for any device (widescreen, desktop, tablet, mobile).
+Additionally, the Spacer Block supports background colors as well
+as background gradients directly from your theme.
 
 == Installation ==
 = Minimum Requirements =
@@ -79,6 +78,9 @@ If you need professional support for this or any other WordPress project, please
 1. Add "Spacer" block
 
 == Changelog ==
+= 1.2.1 =
+* Added support for sixa Form Block
+
 = 1.2.0 =
 * Updated NPM modules
 * Refactored code base for new sixa structure
@@ -96,6 +98,8 @@ If you need professional support for this or any other WordPress project, please
 * Initial release
 
 == Upgrade Notice ==
+= 1.2.1 =
+This version adds support for sixa Spacer Block in sixa Form Block.
 
 = 1.2.0 =
 Initial wordpress.org release. Refined code base, fully compatible with all sixa libraries and other sixa blocks and extensions.
