@@ -3,7 +3,7 @@ Contributors: sixa, mahdiyazdani, gookaani, kuserich
 Donate link: https://sixa.com/
 Tags: block, gutenberg, space, divider, separator, margin, sixa
 Requires at least: 5.7
-Tested up to: 5.8.2
+Tested up to: 5.8
 Stable tag: 1.2.1
 Requires PHP: 7.3
 License: GPLv3 or later
