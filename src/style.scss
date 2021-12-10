@@ -48,7 +48,7 @@ $prefix: sixa;
 }
 
 @include desktop-only {
-	.#{$prefix}-hide-desktop {
+	.#{$prefix}-hide-laptop {
 		display: none;
 	}
 }

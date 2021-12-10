@@ -4,7 +4,7 @@ Donate link: https://sixa.com/
 Tags: block, gutenberg, space, divider, separator, margin, sixa
 Requires at least: 5.7
 Tested up to: 5.8
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 Requires PHP: 7.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -78,6 +78,9 @@ If you need professional support for this or any other WordPress project, please
 1. Add "Spacer" block
 
 == Changelog ==
+= 1.2.2 =
+* Fixed incorrect hide classname for desktop
+
 = 1.2.1 =
 * Added support for sixa Form Block
 
@@ -98,6 +101,9 @@ If you need professional support for this or any other WordPress project, please
 * Initial release
 
 == Upgrade Notice ==
+= 1.2.2 =
+This version fixes a bug where the hide functionality didn't work for desktop devices.
+
 = 1.2.1 =
 This version adds support for sixa Spacer Block in sixa Form Block.
 
