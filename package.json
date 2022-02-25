@@ -1,6 +1,6 @@
 {
 	"name": "@sixach/wp-block-spacer",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"private": true,
 	"description": "Block to add empty vertical space (full-width).",
 	"keywords": [
@@ -57,15 +57,15 @@
 		"@sixa/wp-block-components": "1.14.1",
 		"@sixa/wp-block-utils": "1.2.0",
 		"@sixa/wp-react-hooks": "1.11.0",
-		"@wordpress/block-editor": "8.0.9",
-		"@wordpress/blocks": "11.1.4",
-		"@wordpress/components": "19.1.3",
-		"@wordpress/compose": "5.0.6",
-		"@wordpress/data": "6.1.4",
-		"@wordpress/element": "4.0.4",
-		"@wordpress/hooks": "3.2.2",
-		"@wordpress/i18n": "4.2.4",
-		"@wordpress/primitives": "3.0.4",
+		"@wordpress/block-editor": "8.2.0",
+		"@wordpress/blocks": "11.2.2",
+		"@wordpress/components": "19.5.0",
+		"@wordpress/compose": "5.1.2",
+		"@wordpress/data": "6.3.0",
+		"@wordpress/element": "4.1.1",
+		"@wordpress/hooks": "3.3.1",
+		"@wordpress/i18n": "4.3.1",
+		"@wordpress/primitives": "3.1.1",
 		"classnames": "2.3.1",
 		"lodash": "4.17.21",
 		"prop-types": "15.8.1"
@@ -75,8 +75,8 @@
 		"@emotion/babel-preset-css-prop": "11.2.0",
 		"@emotion/react": "11.8.1",
 		"@sixa/wp-scripts": "1.0.0",
-		"@wordpress/scripts": "19.2.2",
-		"husky": "^7.0.4",
+		"@wordpress/scripts": "22.0.1",
+		"husky": "7.0.4",
 		"lint-staged": "12.3.4",
 		"prettier": "npm:wp-prettier@2.2.1-beta-1"
 	}
