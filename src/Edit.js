@@ -94,7 +94,7 @@ function Edit( { attributes, backgroundColor, isSelected, setAttributes, setBack
 		setAttributes( {
 			height: min( [ parseInt( add( height, delta?.height ), 10 ), 1000 ] ),
 		} );
-		toggleIsResizing( false );
+		toggleIsResizing();
 	};
 	const { gradientClass: backgroundGradientClass, gradientValue: backgroundGradientValue, setGradient: setBackgroundGradient } = __experimentalUseGradient();
 	const { backgroundColorClass, backgroundColorValue } = useMemo(
@@ -104,8 +104,9 @@ function Edit( { attributes, backgroundColor, isSelected, setAttributes, setBack
 		} ),
 		[ backgroundColor ]
 	);
-	const classNames = classnames( 'block-library-spacer__resize-container', visibilityClassNames, {
+	const classNames = classnames( visibilityClassNames, {
 		'is-selected': isSelected,
+		'is-resizing': isResizing,
 		'has-background': backgroundColorClass || backgroundColorValue,
 		'has-background-gradient': backgroundGradientClass || backgroundGradientValue,
 		[ backgroundColorClass ]: backgroundColorClass,
@@ -150,7 +151,8 @@ function Edit( { attributes, backgroundColor, isSelected, setAttributes, setBack
 				__experimentalTooltipProps={ {
 					axis: 'y',
 					isVisible: isResizing,
-					position: 'bottom',
+					position: 'corner',
+					showPx: true,
 				} }
 			/>
 			<VisibilityToolbar onChange={ ( value ) => setAttributes( { ...value } ) } shouldRender={ isSelected } value={ visible } />
