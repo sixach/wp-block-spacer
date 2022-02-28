@@ -1,0 +1,8 @@
+$prefix: sixa;
+
+.wp-block-#{$prefix}-spacer {
+
+	&.is-selected {
+		background-color: rgb(204, 204, 204, 0.4);
+	}
+}

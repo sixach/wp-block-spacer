@@ -64,6 +64,14 @@ import classnames from 'classnames';
 import Inspector from './components/Inspector';
 
 /**
+ * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
+ * Those files can contain any CSS code that gets applied to the editor.
+ *
+ * @see    https://www.npmjs.com/package/@wordpress/scripts#using-css
+ */
+import './editor.scss';
+
+/**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
  *
@@ -94,7 +102,7 @@ function Edit( { attributes, backgroundColor, isSelected, setAttributes, setBack
 		setAttributes( {
 			height: min( [ parseInt( add( height, delta?.height ), 10 ), 1000 ] ),
 		} );
-		toggleIsResizing( false );
+		toggleIsResizing();
 	};
 	const { gradientClass: backgroundGradientClass, gradientValue: backgroundGradientValue, setGradient: setBackgroundGradient } = __experimentalUseGradient();
 	const { backgroundColorClass, backgroundColorValue } = useMemo(
@@ -104,8 +112,9 @@ function Edit( { attributes, backgroundColor, isSelected, setAttributes, setBack
 		} ),
 		[ backgroundColor ]
 	);
-	const classNames = classnames( 'block-library-spacer__resize-container', visibilityClassNames, {
+	const classNames = classnames( visibilityClassNames, {
 		'is-selected': isSelected,
+		'is-resizing': isResizing,
 		'has-background': backgroundColorClass || backgroundColorValue,
 		'has-background-gradient': backgroundGradientClass || backgroundGradientValue,
 		[ backgroundColorClass ]: backgroundColorClass,
@@ -150,7 +159,8 @@ function Edit( { attributes, backgroundColor, isSelected, setAttributes, setBack
 				__experimentalTooltipProps={ {
 					axis: 'y',
 					isVisible: isResizing,
-					position: 'bottom',
+					position: 'corner',
+					showPx: true,
 				} }
 			/>
 			<VisibilityToolbar onChange={ ( value ) => setAttributes( { ...value } ) } shouldRender={ isSelected } value={ visible } />
