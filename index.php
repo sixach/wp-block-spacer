@@ -23,6 +23,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
  * Include the namespace of this block.
  */
 use Sixa_Blocks\Spacer;
+use Sixa_API_Manager_Client\Main as API_Manager_Client;
 
 /**
  * Composer autoload is needed in this package even if
@@ -32,6 +33,11 @@ use Sixa_Blocks\Spacer;
  * @see    https://getcomposer.org/doc/01-basic-usage.md#autoloading
  */
 require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+
+/**
+ * Integration with remote licensing server. Allows to update the plugin.
+ */
+new API_Manager_Client( __FILE__, 30, '1.2.3', 'plugin', 'https://deployment-test.jcloud-ver-jpc.ik-server.com', 'Sixa - Spacer Block' );
 
 /**
  * Initialize your block.

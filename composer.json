@@ -20,7 +20,8 @@
 	"require": {
 		"php": ">=7.3",
 		"sixach/wp-snippets": "^1.4.3",
-		"sixach/wp-block-api": "^1.0.2"
+		"sixach/wp-block-api": "^1.0.2",
+		"sixach/wc-api-manager-client": "@dev"
 	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
@@ -30,6 +31,12 @@
 		"php-parallel-lint/php-parallel-lint": "^1.2.0",
 		"wp-cli/i18n-command": "^2.2.6"
 	},
+	"repositories": [
+    {
+        "type": "path",
+        "url": "../wc-api-manager-client"
+    }
+  ],
 	"scripts": {
 		"lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
 		"lint:wpcbf": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf",
