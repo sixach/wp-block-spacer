@@ -3,7 +3,7 @@
  * Spacer Block.
  *
  * @wordpress-plugin
- * Plugin Name:          Sixa - Spacer Block
+ * Plugin Name:          Spacer Block
  * Description:          Add empty vertical space to your page. Responsive for desktop and mobile devices. Supports background colors and gradients.
  * Version:              1.2.3
  * Requires at least:    5.7
@@ -37,7 +37,7 @@ require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 /**
  * Integration with remote licensing server. Allows to update the plugin.
  */
-new API_Manager_Client( __FILE__, 30, '1.2.3', 'plugin', 'https://deployment-test.jcloud-ver-jpc.ik-server.com', 'Sixa - Spacer Block' );
+new API_Manager_Client( __FILE__, 30, '1.2.3', 'plugin', 'https://deployment-test.jcloud-ver-jpc.ik-server.com', 'Spacer Block' );
 
 /**
  * Initialize your block.
