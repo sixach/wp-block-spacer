@@ -1,7 +1,9 @@
 .bundleignore
 .git
+.github
 .DS_Store
 .editorconfig
+.eslintrc.js
 .gitattributes
 .gitignore
 .husky
