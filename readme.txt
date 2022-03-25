@@ -79,6 +79,9 @@ If you need professional support for this or any other WordPress project, please
 
 == Changelog ==
 = 1.2.3 =
+* Upgraded sixa libraries to ensure compatibility with other sixa blocks.
+
+= 1.2.3 =
 * Fixed CSS specificity in applying correct height since WordPress 5.9 update.
 
 = 1.2.2 =
@@ -104,6 +107,12 @@ If you need professional support for this or any other WordPress project, please
 * Initial release
 
 == Upgrade Notice ==
+= 1.2.4 =
+This version contains a maintenance update to ensure compatibility with other sixa blocks.
+
+= 1.2.3 =
+This version fixes a bug where the height of the spacer block could not be changed.
+
 = 1.2.2 =
 This version fixes a bug where the hide functionality didn't work for desktop devices.
 
