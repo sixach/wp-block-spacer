@@ -3,7 +3,7 @@ Contributors: sixa, mahdiyazdani, gookaani, kuserich
 Donate link: https://sixa.com/
 Tags: block, gutenberg, space, divider, separator, margin, sixa
 Requires at least: 5.7
-Tested up to: 5.8
+Tested up to: 5.9
 Stable tag: 1.2.3
 Requires PHP: 7.3
 License: GPLv3 or later
@@ -78,6 +78,9 @@ If you need professional support for this or any other WordPress project, please
 1. Add "Spacer" block
 
 == Changelog ==
+= 1.2.4 =
+* Upgraded sixa libraries to ensure compatibility with other sixa blocks.
+
 = 1.2.3 =
 * Fixed CSS specificity in applying correct height since WordPress 5.9 update.
 
@@ -104,6 +107,12 @@ If you need professional support for this or any other WordPress project, please
 * Initial release
 
 == Upgrade Notice ==
+= 1.2.4 =
+This version contains a maintenance update to ensure compatibility with other sixa blocks.
+
+= 1.2.3 =
+This version fixes a bug where the height of the spacer block could not be changed.
+
 = 1.2.2 =
 This version fixes a bug where the hide functionality didn't work for desktop devices.
 
