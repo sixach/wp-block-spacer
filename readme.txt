@@ -78,7 +78,7 @@ If you need professional support for this or any other WordPress project, please
 1. Add "Spacer" block
 
 == Changelog ==
-= 1.2.3 =
+= 1.2.4 =
 * Upgraded sixa libraries to ensure compatibility with other sixa blocks.
 
 = 1.2.3 =
