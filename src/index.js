@@ -31,11 +31,6 @@ import './style.scss';
  */
 registerBlockType( 'sixa/spacer', {
 	/**
-	 * @see    https://make.wordpress.org/core/2020/11/18/block-api-version-2/
-	 */
-	apiVersion: 2,
-
-	/**
 	 * @see    ./deprecated.js
 	 */
 	deprecated,

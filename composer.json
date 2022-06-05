@@ -1,7 +1,22 @@
 {
-	"name": "sixach/wp-block-spacer",
-	"type": "wordpress-block",
+	"authors": [
+		{
+			"homepage": "https://sixa.ch",
+			"name": "sixa AG"
+		}
+	],
+	"autoload": {
+		"classmap": [
+			"block"
+		]
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
 	"description": "Add empty vertical space to your page. Responsive for desktop and mobile devices. Supports background colors and gradients.",
+	"homepage": "https://www.sixa.ch",
 	"keywords": [
 		"sixa",
 		"blank",
@@ -9,39 +24,26 @@
 		"margin",
 		"separator"
 	],
-	"homepage": "https://www.sixa.ch",
 	"license": "GPL-3.0",
-	"authors": [
-		{
-			"name": "sixa AG",
-			"homepage": "https://sixa.ch"
-		}
-	],
+	"name": "sixach/wp-block-spacer",
 	"require": {
-		"php": ">=7.3",
-		"sixach/wp-snippets": "^1.7.2",
-		"sixach/wp-block-api": "^1.0.3"
-	},
-	"require-dev": {
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
-		"wp-coding-standards/wpcs": "^2.3.0",
-		"phpunit/phpunit": "^9",
-		"phpcompatibility/phpcompatibility-wp": "^2.1",
-		"php-parallel-lint/php-parallel-lint": "^1.2.0",
-		"wp-cli/i18n-command": "^2.2.6"
-	},
-	"scripts": {
-		"lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
-		"lint:wpcbf": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf",
-		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude node_modules .",
-		"make-pot": "wp i18n make-pot . languages/sixa-block-spacer.pot --exclude=build,svn"
-	},
-	"autoload": {
-		"classmap": [ "block" ]
-	},
-	"config": {
-		"allow-plugins": {
-			"dealerdirect/phpcodesniffer-composer-installer": true
-		}
-	}
+        "php": ">=7.4",
+        "sixach/wp-block-api": "^1.0.3",
+        "sixach/wp-snippets": "^1.7.3"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "php-parallel-lint/php-parallel-lint": "^1.2.0",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "phpunit/phpunit": "^9",
+        "wp-cli/i18n-command": "^2.2.6",
+        "wp-coding-standards/wpcs": "^2.3.0"
+    },
+    "scripts": {
+        "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude node_modules .",
+        "lint:wpcbf": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf --runtime-set testVersion 7.4-",
+        "lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --runtime-set testVersion 7.4-",
+        "make-pot": "wp i18n make-pot . languages/sixa-block-spacer.pot --exclude=build"
+    },
+	"type": "wordpress-block"
 }

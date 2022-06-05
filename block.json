@@ -1,51 +1,54 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 2,
-	"name": "sixa/spacer",
-	"title": "Spacer",
-	"category": "design",
-	"description": "Block to add empty vertical space (full-width).",
-	"keywords": [
-		"sixa",
-		"blank",
-		"divider",
-		"margin",
-		"separator"
-	],
-	"supports": {
-		"align": [ "wide", "full" ],
-		"anchor": true,
-		"html": false
-	},
-	"attributes": {
-		"backgroundColor": {
-			"type": "string"
-		},
-		"customBackgroundColor": {
-			"type": "string"
-		},
-		"customGradient": {
-			"type": "string"
-		},
-		"height": {
-            "type": "number",
-            "default": 100
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "attributes": {
+        "backgroundColor": {
+            "type": "string"
         },
-		"gradient": {
-			"type": "string"
-		},
+        "customBackgroundColor": {
+            "type": "string"
+        },
+        "customGradient": {
+            "type": "string"
+        },
+        "gradient": {
+            "type": "string"
+        },
+        "height": {
+            "default": 100,
+            "type": "number"
+        },
         "visible": {
-            "type": "object",
             "default": {
-                "widescreen": false,
                 "laptop": false,
+                "mobile": false,
                 "tablet": false,
-                "mobile": false
-            }
+                "widescreen": false
+            },
+            "type": "object"
         }
-	},
-	"textdomain": "sixa-block-spacer",
-	"editorScript": "file:./build/index.js",
-	"editorStyle": "file:./build/index.css",
-	"style": "file:./build/style-index.css"
+    },
+    "category": "design",
+    "description": "Block to add empty vertical space (full-width).",
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./build/index.css",
+    "keywords": [
+        "sixa",
+        "blank",
+        "divider",
+        "margin",
+        "separator"
+    ],
+    "name": "sixa/spacer",
+    "style": "file:./build/style-index.css",
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ],
+        "anchor": true,
+        "html": false
+    },
+    "textdomain": "sixa-block-spacer",
+    "title": "Spacer"
 }
