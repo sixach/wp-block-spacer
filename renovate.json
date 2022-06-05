@@ -1,23 +1,25 @@
 {
-	"extends": [ "config:base" ],
-	"lockFileMaintenance": { "enabled": true },
-	"ignoreDeps": [ "husky" ],
-	"schedule": [ "before 3am on wednesday" ],
 	"composer": {
 		"enabled": false
 	},
+	"extends": [ "config:base" ],
+	"ignoreDeps": [ "husky" ],
 	"labels": [ "type: dependencies", "skip-changelog" ],
+	"lockFileMaintenance": {
+		"enabled": true
+	},
 	"packageRules": [
 		{
-			"updateTypes": [ "minor", "patch" ],
-			"depTypeList": [ "devDependencies", "dependencies" ],
 			"automerge": true,
-			"requiredStatusChecks": null
+			"depTypeList": [ "devDependencies", "dependencies" ],
+			"requiredStatusChecks": null,
+			"updateTypes": [ "minor", "patch" ]
 		},
 		{
-			"updateTypes": [ "lockFileMaintenance" ],
-			"automerge": true
+			"automerge": true,
+			"updateTypes": [ "lockFileMaintenance" ]
 		}
 	],
-	"rebaseWhen": "conflicted"
+	"rebaseWhen": "conflicted",
+	"schedule": [ "before 3am on wednesday" ]
 }
