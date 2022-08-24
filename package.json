@@ -75,7 +75,7 @@
 		"@emotion/babel-preset-css-prop": "11.10.0",
 		"@emotion/react": "11.10.0",
 		"@sixa/wp-scripts": "1.0.0",
-		"@wordpress/scripts": "23.7.1",
+		"@wordpress/scripts": "23.7.2",
 		"husky": "8.0.1",
 		"lint-staged": "13.0.3",
 		"prettier": "npm:wp-prettier@2.6.2"
